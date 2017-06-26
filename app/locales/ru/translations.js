@@ -19,7 +19,8 @@ Ember.$.extend(true, translations, {
     },
 
     login: {
-      caption: 'Войти',
+      caption: 'Вход в систему',
+      enter: 'Вход',
       logout: 'Выйти',
       back: 'Назад',
       login: 'Логин',

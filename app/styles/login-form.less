@@ -1,4 +1,36 @@
+.ui.form .field {
+  margin: 0 !important;
+}
 .login-form {
-  width: 30% !important;
-  margin: auto;
+  display: block;
+  background: #fff;
+  margin: 20px auto;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+}
+.login-form-header {
+  text-align: center;
+  font-size: 1.5rem !important;
+  font-weight: 400;
+  padding: 5% 0 10% 0 !important;
+}
+.login-field,
+&.password-field {
+  padding: 0 10% 5%;
+}
+.login-footer {
+  background-color: #e5f1ff;
+  height: 50px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 2.5% 9.5%;
+
+  .login-close-btn {
+    float: left;
+  }
+  .log-btn {
+    float: right;
+  }
 }
