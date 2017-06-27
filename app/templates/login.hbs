@@ -1,4 +1,3 @@
-
 {{#if errorMessage}}
   {{ui-message
     type='error'
@@ -40,14 +39,12 @@
     {{/if}}
 
     <div class="field login-footer">
-      <div class="flexberry-edit-panel">
-        <button type="submit" class="ui button login-close-btn" {{action 'closeLoginForm'}}>
-          {{t "forms.login.back"}}
-        </button>
-        <button type="submit" class="ui positive button  log-btn" {{action (if login 'logout' 'login')}}>
-          {{t (if login "forms.login.logout" "forms.login.enter")}}
-        </button>
-      </div>
+      <button type="submit" class="ui button login-close-btn" {{action 'closeLoginForm'}}>
+        {{t "forms.login.back"}}
+      </button>
+      <button type="submit" class="ui button  log-btn" {{action (if login 'logout' 'login')}}>
+        {{t (if login "forms.login.logout" "forms.login.enter")}}
+      </button>
     </div>
   </form>
 </div>

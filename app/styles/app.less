@@ -1,15 +1,56 @@
+@import 'src/semantic';
 @import "./login-form.less";
 
 .loading-message {
   text-align: center;
   color: #aaa;
 }
-.ui.attached.menu {
-  background: #4f73b0 !important;
+.exit-btn {
+  cursor: pointer;
 }
-.flexberry-content {
-  background: #a3cef9 !important;
+// Examples application template
+#example-with-submenu {
+  padding-top: 40px;
+
+  .flexberry-submenu .item {
+    padding-right: 0;
+    > .menu {
+      margin-right: -2px;
+    }
+  }
+
+  .flexberry-content {
+    position: relative;
+    padding: 0;
+
+    &.segment {
+      box-shadow: none;
+      border: none;
+    }
+  }
 }
-.footer {
-  background: #e0e1e2 !important;
+
+.ui.form .field > .field {
+  margin-bottom: 0;
+}
+
+#example {
+  .flexberry-content {
+    padding: 1em 0;
+  }
+}
+
+#example-mobile {
+  .flexberry-content {
+    padding: 4em 10px 2em 10px;
+    border-bottom: none;
+  }
+}
+
+.flexberry-word-break {
+  word-break: break-all !important;
+}
+
+.ui.menu.mobile:not(.inverted) .item, .ui.menu.mobile .ui.selection.dropdown, .ui.menu.mobile .ui.selection.visible.dropdown > .text:not(.default) {
+    color: rgba(255, 255, 255, 0.9)!important;
 }

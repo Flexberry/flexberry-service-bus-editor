@@ -13,6 +13,13 @@ export default Ember.Controller.extend({
   actions: {
     /**
     */
+    hideHeader() {
+        Ember.$('ui.attached.top').addClass('hidden-header');
+        Ember.$('page-header-userbar').addClass('hidden-header');
+    },
+
+    /**
+    */
     login() {
       let _this = this;
       let login = _this.get('loginInput');

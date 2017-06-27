@@ -25,7 +25,7 @@ module.exports = function(defaults) {
     SemanticUI: {
       import: {
         css: false,
-        javascript: true,
+        javascript: false,
         images: false,
         fonts: true
       }
@@ -65,6 +65,7 @@ module.exports = function(defaults) {
   app.import('vendor/serviceImages/header-bgw.png', { destDir: 'assets/themes/orange/assets/images' });
   app.import('vendor/serviceImages/bgw-head-calendar.png', { destDir: 'assets/themes/orange/assets/images' });
 
+  app.import('bower_components/semantic-ui/dist/semantic.js');
 
   return app.toTree();
 };

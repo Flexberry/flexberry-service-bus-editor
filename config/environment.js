@@ -26,6 +26,7 @@ module.exports = function(environment) {
 
     APP: {
       // Application name. Used in `user-settings` service.
+      name: 'flexberry-service-bus-editor',
 
       backendUrl: backendUrl,
 
@@ -68,6 +69,7 @@ module.exports = function(environment) {
 
       // Custom property with offline mode settings.
       offline: {
+        dbName: 'flexberry-service-bus-editor',
 
         // Flag that indicates whether offline mode in application is enabled or not.
         offlineEnabled: true,
