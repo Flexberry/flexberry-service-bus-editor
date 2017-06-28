@@ -1,30 +1,32 @@
 {
   "name": "flexberry-service-bus-editor",
   "version": "0.0.0",
-  "description": "Small description for flexberry-service-bus-editor goes here",
-  "private": true,
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
+  "description": "Flexberry-service-bus-editor application",
+  "license": "MIT",
+  "author": {
+    "name": "Flexberry Team",
+    "email": "mail@flexberry.net",
+    "url": "http://flexberry.net/"
   },
   "scripts": {
     "build": "ember build",
     "start": "ember server",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Flexberry/flexberry-service-bus-editor.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
     "broccoli-jscs": "1.2.2",
     "dexie": "1.4.2",
-    "ember-ajax": "^2.0.1",
+    "ember-ajax": "0.7.1",
     "ember-browserify": "1.1.9",
-    "ember-cli": "2.8.0",
+    "ember-cli": "^2.4.3",
     "ember-cli-app-version": "^1.0.0",
     "ember-cli-babel": "^5.1.6",
     "ember-cli-dependency-checker": "^1.2.0",
@@ -32,23 +34,20 @@
     "ember-cli-htmlbars-inline-precompile": "^0.3.1",
     "ember-cli-inject-live-reload": "^1.4.0",
     "ember-cli-jshint": "^1.0.0",
-    "ember-cli-less": "^1.5.4",
-    "ember-cli-moment-shim": "3.3.1",
+    "ember-cli-less": "1.5.4",
+    "ember-cli-moment-shim": "3.3.3",
     "ember-cli-qunit": "^2.1.0",
     "ember-cli-release": "^0.2.9",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-test-loader": "^1.1.0",
     "ember-cli-uglify": "^1.2.0",
-    "ember-data": "2.13.1",
+    "ember-data": "^2.4.2",
     "ember-export-application-global": "^1.0.5",
     "ember-flexberry": "0.9.0-beta.12",
-    "ember-i18n": "5.0.1",
     "ember-link-action": "0.0.34",
     "ember-load-initializers": "^0.5.1",
-    "ember-metal": "0.9.2",
     "ember-moment": "6.0.0",
     "ember-resolver": "^2.0.3",
-    "ember-welcome-page": "^1.0.1",
     "inflection": "1.10.0",
     "loader.js": "^4.0.1",
     "node-uuid": "1.4.7",

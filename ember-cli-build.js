@@ -11,6 +11,16 @@ module.exports = function(defaults) {
     },
     lessOptions: {
       paths: [
+        'bower_components/semantic-ui'
+      ]
+    },
+    jscsOptions: {
+      enabled: true,
+      esnext: true,
+      configPath: './.jscsrc'
+    },
+    lessOptions: {
+      paths: [
         'bower_components/semantic-ui',
         'bower_components/app/styles/app.less'
       ]
