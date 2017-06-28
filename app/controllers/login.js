@@ -6,6 +6,11 @@ export default Ember.Controller.extend({
   /**
   */
   controllerName: 'login',
+
+  /**
+  */
+  appController: Ember.inject.controller('application'),
+
   /**
   */
   login: '',
@@ -14,8 +19,8 @@ export default Ember.Controller.extend({
     /**
     */
     hideHeader() {
-        Ember.$('ui.attached.top').addClass('hidden-header');
-        Ember.$('page-header-userbar').addClass('hidden-header');
+      Ember.$('.ui.attached.top').addClass('hidden-header');
+      Ember.$('.page-header-userbar').addClass('hidden-header');
     },
 
     /**
@@ -36,6 +41,8 @@ export default Ember.Controller.extend({
             if (result.value === true) {
               _this._resetLoginData(login);
               _this.transitionToRoute('index');
+              _this._sendLogin();
+              _this._showHeader();
             } else {
               _this.set('errorMessage', t('forms.login.errors.incorrect-auth-data'));
             }
@@ -67,6 +74,8 @@ export default Ember.Controller.extend({
         success(result) {
           if (result.value === true) {
             _this.set('login', '');
+            _this._sendLogin();
+            _this._hideHeader();
           } else {
             _this.set('errorMessage', t('forms.login.errors.unknown-error'));
           }
@@ -92,6 +101,26 @@ export default Ember.Controller.extend({
       this._resetLoginErrors();
       this.transitionToRoute('index');
     },
+  },
+
+  _sendLogin() {
+    let appController = this.get('appController');
+    let login = this.get('login');
+    appController.getLogin(login);
+  },
+
+  /**
+  */
+  _hideHeader() {
+    Ember.$('.ui.attached.top').addClass('hidden-header');
+    //Ember.$('.page-header-userbar').addClass('hidden-header')
+  },
+
+  /**
+  */
+  _showHeader() {
+    Ember.$('.ui.attached.top').removeClass('hidden-header');
+    //Ember.$('.page-header-userbar').removeClass('hidden-header')
   },
 
   /**

@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
+  controllerName: 'application',
   /**
   */
   login: '',
@@ -95,6 +96,13 @@ export default Ember.Controller.extend({
 
   actions: {
     /**
+    */
+    hideHeader() {
+      Ember.$('.ui.attached.top').addClass('hidden-header');
+      Ember.$('.page-header-userbar').addClass('hidden-header');
+    },
+
+    /**
       Toggles application sitemap's side bar.
 
       @method actions.toggleSidebar
@@ -141,5 +149,9 @@ export default Ember.Controller.extend({
     goToMainPage() {
       this.transitionToRoute('index');
     },
+  },
+
+  getLogin(login) {
+    this.set('login', login);
   },
 });

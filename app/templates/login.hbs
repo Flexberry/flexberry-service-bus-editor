@@ -6,7 +6,7 @@
   }}
 {{/if}}
 <div class="login-form">
-  <h3 class="ui header login-form-header">{{t "forms.login.caption"}}</h3>
+  <h3 class="ui header login-form-header">{{t (if login "forms.login.personalArea" "forms.login.caption")}}</h3>
 
   <form class="ui form flexberry-vertical-form{{if tryToLogin 'loading'}}" role="form">
     {{#if login}}

@@ -4,7 +4,7 @@
 {{else}}
 <div class="bgw-fix">
   <div class="background-logo">
-    <div class="ui top attached">
+    <div class="ui top attached hidden-header">
       <div class="ui attached menu">
         <div class="ui container flex-container">
           <a {{action 'toggleSidebar'}}
@@ -17,10 +17,15 @@
         </div>
       </div>
     </div>
-    <div class="page-header-caption">{{t "application-name"}}</div>
+    <div class="page-header-caption">
+      <a {{action 'goToMainPage'}}
+          title={{t "application-name"}}>
+        {{t "application-name"}}
+      </a>
+    </div>
     <div class="page-header-userbar">
       <span id="fio" class="hidden">ICS_HOME\login</span>
-      <a id="ExitButton" class="exit-btn" {{action (if login 'logout' 'goToLoginForm')}}>
+      <a id="ExitButton" class="exit-btn" {{action 'goToLoginForm'}}>
         {{t (if login "forms.application.header.logout.caption" "forms.application.header.login.caption")}}
       </a>
     </div>

@@ -18,6 +18,7 @@ Ember.$.extend(true, translations, {
 
     login: {
       caption: 'Войти в систему',
+      personalArea: 'Личный кабинет',
       logout: 'Выйти',
       back: 'Назад',
       login: 'Логин',
