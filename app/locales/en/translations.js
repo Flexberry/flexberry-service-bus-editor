@@ -8,14 +8,14 @@ Ember.$.extend(true, translations, {
   models: {
   },
 
-  'application-name': 'flexberry-service-bus-editor',
+  'application-name': 'Flexberry-service-bus-editor test stand',
 
   forms: {
     loading: {
       'spinner-caption': 'Loading stuff, please wait...'
     },
     index: {
-      greeting: 'Welcome to flexberry-service-bus-editor application!'
+      greeting: 'Welcome to Flexberry-service-bus-editor application!'
     },
 
     login: {
@@ -23,6 +23,7 @@ Ember.$.extend(true, translations, {
       logout: 'Logout',
       back: 'Back',
       login: 'Login',
+      enter: 'Login',
       password: 'Password',
       'you-logged-as': 'You logged as: "{{login}}".',
       errors: {
@@ -35,55 +36,85 @@ Ember.$.extend(true, translations, {
       },
     },
 
-    application: {
-      'sync-up': 'Sync up',
-      header: {
-        menu: {
+    'application': {
+      'header': {
+        'menu': {
           'sitemap-button': {
-            caption: '',
-            title: 'Menu'
+            'caption': '',
+            'title': 'Menu'
           },
           'user-settings-service-checkbox': {
-            caption: 'Use service to save user settings'
+            'caption': 'Use service to save user settings'
+          },
+          'show-menu': {
+            'caption': 'Show menu'
+          },
+          'hide-menu': {
+            'caption': 'Hide menu'
           },
           'language-dropdown': {
-            caption: 'Application language',
-            placeholder: 'Choose language'
+            'caption': 'Application language',
+            'placeholder': 'Choose language'
+          }
+        },
+        'login': {
+          'caption': 'Login'
+        },
+        'sync-up': {
+          'caption': 'Sync Up'
+        },
+        'logout': {
+          'caption': 'Logout'
+        }
+      },
+
+      'footer': {
+        'application-name': 'Test stand for Flexberry-security-bus-editor',
+        'application-version': {
+          'caption': 'Addon version {{version}}',
+          'title': 'It is version of Flexberry-security-bus-editor, which uses in this dummy application ' +
+            '(npm version + commit sha). ' +
+            'Click to open commit on GitHub.'
+        }
+      },
+
+      'sitemap': {
+        'application-name': {
+          'caption': 'Test stand for Flexberry-security-bus-editor',
+          'title': ''
+        },
+        'application-version': {
+          'caption': 'Addon version {{version}}',
+          'title': 'It is version of Flexberry-security-bus-editor, which uses in this dummy application ' +
+            '(npm version + commit sha). ' +
+            'Click to open commit on GitHub.'
+        },
+        'index': {
+          'caption': 'Home',
+          'title': ''
+        },
+        'application': {
+          'caption': 'Application',
+          'title': '',
+          'application-users': {
+            'caption': 'Application users',
+            'title': ''
+          },
+          'localizations': {
+            'caption': 'Localizations',
+            'title': ''
+          }
+        },
+        'user-setting-forms': {
+          'caption': 'User settings',
+          'title': '',
+          'user-setting-delete': {
+            'caption': 'Delete settings',
+            'title': ''
           }
         }
-      },
-
-      footer: {
-        'application-name': 'Application caption',
-        'application-version': {
-          caption: 'Addon version {{version}}',
-          title: 'It is version of Flexberry Service-bus Editor application ' +
-          '(npm version + commit sha). ' +
-          'Click to open commit on GitHub.'
-        }
-      },
-
-      sitemap: {
-        'application-name': {
-          caption: 'Flexberry Service-bus Editor',
-          title: 'Flexberry Service-bus Editor'
-        },
-        'application-version': {
-          caption: 'Addon version {{version}}',
-          title: 'It is version of Flexberry Service-bus Editor application ' +
-          '(npm version + commit sha). ' +
-          'Click to open commit on GitHub.'
-        },
-        index: {
-          caption: 'Home',
-          title: ''
-        },
-        application: {
-          caption: 'application',
-          title: 'application'
-        }
       }
-    },
+    }
   },
 
 });

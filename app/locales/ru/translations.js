@@ -102,14 +102,6 @@ Ember.$.extend(true, translations, {
           'localizations': {
             'caption': 'Локализация',
             'title': ''
-          },
-          'suggestion-types': {
-            'caption': 'Типы предложений',
-            'title': ''
-          },
-          'suggestions': {
-            'caption': 'Предложения',
-            'title': ''
           }
         },
         'user-setting-forms': {
@@ -121,32 +113,6 @@ Ember.$.extend(true, translations, {
           }
         }
       }
-    },
-
-    'edit-form': {
-      'save-success-message-caption': 'Сохранение завершилось успешно',
-      'save-success-message': 'Объект сохранен',
-      'save-error-message-caption': 'Ошибка сохранения',
-      'delete-success-message-caption': 'Удаление завершилось успешно',
-      'delete-success-message': 'Объект удален',
-      'delete-error-message-caption': 'Ошибка удаления'
-    },
-    'user-setting-forms': {
-      'user-setting-delete': {
-        'caption': 'Пользовательские настройки',
-        'all-del-button-name': 'Удалить все!',
-        'message': 'Настройки удалены'
-      }
-    }
-  },
-
-  'components': {
-    'settings-example': {
-      'component-template-caption': 'Шаблон компонента',
-      'controller-properties-caption': 'Свойства контроллера',
-      'component-current-settings-caption': 'Текущие настройки компонента',
-      'component-default-settings-caption': 'Настройки компонента по умолчанию',
-      'component-with-applied-settings-caption': 'Компонент с примененными текущими настройками'
     }
   }
 });
