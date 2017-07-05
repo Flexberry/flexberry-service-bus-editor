@@ -71,9 +71,16 @@
           }}
         {{/if}}
       </div>
-      <div class="right menu">
-        <a class="brand item" href="#">
-          {{t "forms.application.footer.application-name"}}
+      <div class="right menu item">
+        <label style="margin-right: 5px;">
+          {{t "forms.application.header.menu.user-settings-service-checkbox.caption"}}
+        </label>
+        {{flexberry-checkbox
+          class="toggle"
+          value=userSettingsService.isUserSettingsServiceEnabled
+        }}
+        <a class="brand item" href="https://github.com/Flexberry/flexberry-service-bus-editor" target="_blank">
+          {{t "forms.application.footer.application-git"}}
         </a>
       </div>
     </div>

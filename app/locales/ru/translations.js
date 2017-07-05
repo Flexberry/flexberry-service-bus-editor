@@ -6,14 +6,14 @@ Ember.$.extend(true, translations, EmberFlexberryTranslations);
 
 Ember.$.extend(true, translations, {
 
-  'application-name': 'Тестовый стенд  Flexberry-security-bus-editor',
+  'application-name': 'Flexberry service bus editor',
 
   'forms': {
     'loading': {
       'spinner-caption': 'Данные загружаются, пожалуйста подождите...'
     },
     'index': {
-      'greeting': 'Добро пожаловать на тестовый стенд  Flexberry-security-bus-editor!'
+      'greeting': 'Добро пожаловать на Flexberry service bus editor!'
     },
 
     login: {
@@ -68,10 +68,10 @@ Ember.$.extend(true, translations, {
       },
 
       'footer': {
-        'application-name': 'Тестовый стенд  Flexberry-security-bus-editor',
+        'application-git': 'Flexberry service bus editor на Github',
         'application-version': {
           'caption': 'Версия {{version}}',
-          'title': 'Это версия  Flexberry-security-bus-editor, которая сейчас используется в этом тестовом приложении ' +
+          'title': 'Это версия  Flexberry service bus editor' +
             '(версия npm-пакета + хэш коммита). ' +
             'Кликните, чтобы перейти на GitHub.'
         }
@@ -79,12 +79,12 @@ Ember.$.extend(true, translations, {
 
       'sitemap': {
         'application-name': {
-          'caption': 'Тестовый стенд  Flexberry-security-bus-editor',
+          'caption': 'Flexberry service bus editor',
           'title': ''
         },
         'application-version': {
           'caption': 'Версия аддона {{version}}',
-          'title': 'Это версия Flexberry-security-bus-editor, которая сейчас используется в этом тестовом приложении ' +
+          'title': 'Это версия Flexberry service bus editor' +
             '(версия npm-пакета + хэш коммита). ' +
             'Кликните, чтобы перейти на GitHub.'
         },
