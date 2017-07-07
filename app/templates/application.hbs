@@ -1,19 +1,17 @@
-{{#if isInAcceptanceTestMode}}
-  {{outlet}}
-  {{outlet "modal"}}
-{{else}}
 <div class="bgw-fix">
   <div class="background-logo">
-    <div class="ui top attached hidden-header">
+    <div class="ui top attached">
       <div class="ui attached menu">
         <div class="ui container flex-container">
-          <a {{action 'toggleSidebar'}}
-            class="launch icon item"
-            title={{t "forms.application.header.menu.sitemap-button.title"}}>
-            {{t "forms.application.header.menu.sitemap-button.caption"}}
-            <i class="sidebar icon text-menu-1"><span class="text_menu ">{{t "forms.application.header.menu.show-menu.caption"}}</span><span class="text_menu hidden-menu text-menu-2">{{t "forms.application.header.menu.hide-menu.caption"}}</span></i>
-            <i class="sidebar icon hidden-menu text-menu-2 hidden-text"><span class="text_menu hidden-text">{{t "forms.application.header.menu.hide-menu.caption"}}</span></i>
-          </a>
+          {{#if login}}
+            <a {{action 'toggleSidebar'}}
+              class="launch icon item"
+              title={{t "forms.application.header.menu.sitemap-button.title"}}>
+              {{t "forms.application.header.menu.sitemap-button.caption"}}
+              <i class="sidebar icon text-menu-1"><span class="text_menu ">{{t "forms.application.header.menu.show-menu.caption"}}</span><span class="text_menu hidden-menu text-menu-2">{{t "forms.application.header.menu.hide-menu.caption"}}</span></i>
+              <i class="sidebar icon hidden-menu text-menu-2 hidden-text"><span class="text_menu hidden-text">{{t "forms.application.header.menu.hide-menu.caption"}}</span></i>
+            </a>
+          {{/if}}
         </div>
       </div>
     </div>
@@ -34,7 +32,7 @@
 <div id="example" class="pusher">
   <div class="full height" style="min-height: 90vh" >
     <div class="flexberry-content ui attached segment">
-    {{#ui-sidebar class="inverted vertical main menu" dimPage=false}}
+    {{#ui-sidebar class="inverted vertical main menu" context="#example" dimPage=false}}
       {{render "sitemap" sitemap}}
     {{/ui-sidebar}}
       <div class="ui main container">
@@ -71,19 +69,11 @@
           }}
         {{/if}}
       </div>
-      <div class="right menu item">
-        <label style="margin-right: 5px;">
-          {{t "forms.application.header.menu.user-settings-service-checkbox.caption"}}
-        </label>
-        {{flexberry-checkbox
-          class="toggle"
-          value=userSettingsService.isUserSettingsServiceEnabled
-        }}
-        <a class="brand item" href="https://github.com/Flexberry/flexberry-service-bus-editor" target="_blank">
+      <div class="right menu">
+        <a class="brand item" href="#">
           {{t "forms.application.footer.application-git"}}
         </a>
       </div>
     </div>
   </div>
 </div>
-{{/if}}

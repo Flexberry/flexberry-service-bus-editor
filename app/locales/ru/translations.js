@@ -1,8 +1,14 @@
 import Ember from 'ember';
 import EmberFlexberryTranslations from 'ember-flexberry/locales/ru/translations';
+import EmberFlexberrySecurityTranslations from 'ember-flexberry-security/locales/ru/translations';
+import EmberFlexberryServiceBusTranslations from 'ember-flexberry-service-bus/locales/ru/translations';
 
 const translations = {};
-Ember.$.extend(true, translations, EmberFlexberryTranslations);
+Ember.$.extend(true, translations,
+                 EmberFlexberryTranslations,
+                 EmberFlexberrySecurityTranslations,
+                 EmberFlexberryServiceBusTranslations
+               );
 
 Ember.$.extend(true, translations, {
 

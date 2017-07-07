@@ -33,6 +33,7 @@
           required=true
           value=password
           placeholder=(t 'components.flexberry-field.placeholder')
+          enter='login'
         }}
         {{flexberry-validationmessage error=emptyPassword pointing="pointing"}}
       </div>
@@ -42,7 +43,7 @@
       <button type="submit" class="ui button login-close-btn" {{action 'closeLoginForm'}}>
         {{t "forms.login.back"}}
       </button>
-      <button type="submit" class="ui button  log-btn" {{action (if login 'logout' 'login')}}>
+      <button type="submit" class="ui button login-logout-btn" {{action (if login 'logout' 'login')}}>
         {{t (if login "forms.login.logout" "forms.login.enter")}}
       </button>
     </div>

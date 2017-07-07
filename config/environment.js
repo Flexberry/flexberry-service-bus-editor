@@ -13,7 +13,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'flexberry-service-bus-editor',
     environment: environment,
-    rootURL: '/',
+    baseURL: '/',
     locationType: 'auto',
     EmberENV: {
       LOG_STACKTRACE_ON_DEPRECATION: false,
@@ -149,6 +149,7 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
+    ENV.baseURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter

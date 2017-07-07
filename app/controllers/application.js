@@ -1,8 +1,10 @@
 import Ember from 'ember';
+import config from '../config/environment';
+import { translationMacro as t } from 'ember-i18n';
 
 export default Ember.Controller.extend({
-
   controllerName: 'application',
+
   /**
   */
   login: '',
@@ -89,7 +91,130 @@ export default Ember.Controller.extend({
           caption: i18n.t('forms.application.sitemap.index.caption'),
           title: i18n.t('forms.application.sitemap.index.title'),
           children: null
+        }, {
+          link: null,
+          caption: i18n.t('forms.application.sitemap.routing.caption'),
+          title: i18n.t('forms.application.sitemap.routing.title'),
+          children: [{
+            link: 'new-platform-flexberry-service-bus-client-list-form',
+            caption: i18n.t('forms.application.sitemap.routing.new-platform-flexberry-service-bus-client-list-form.caption'),
+            title: i18n.t('forms.application.sitemap.routing.new-platform-flexberry-service-bus-client-list-form.title'),
+            children: null
+          }, {
+            link: 'new-platform-flexberry-service-bus-message-type-list-form',
+            caption: i18n.t('forms.application.sitemap.routing.new-platform-flexberry-service-bus-message-type-list-form.caption'),
+            title: i18n.t('forms.application.sitemap.routing.new-platform-flexberry-service-bus-message-type-list-form.title'),
+            children: null
+          }, {
+            link: 'new-platform-flexberry-service-bus-subscription-list-form',
+            caption: i18n.t('forms.application.sitemap.routing.new-platform-flexberry-service-bus-subscription-list-form.caption'),
+            title: i18n.t('forms.application.sitemap.routing.new-platform-flexberry-service-bus-subscription-list-form.title'),
+            children: null
+          }]
+        }, {
+          link: null,
+          caption: i18n.t('forms.application.sitemap.state.caption'),
+          title: i18n.t('forms.application.sitemap.state.title'),
+          children: [{
+            link: 'new-platform-flexberry-service-bus-message-list-form',
+            caption: i18n.t('forms.application.sitemap.state.new-platform-flexberry-service-bus-message-list-form.caption'),
+            title: i18n.t('forms.application.sitemap.state.new-platform-flexberry-service-bus-message-list-form.title'),
+            children: null
+          }]
+        }, {
+          link: null,
+          caption: i18n.t('forms.application.sitemap.statistics.caption'),
+          title: i18n.t('forms.application.sitemap.statistics.title'),
+          children: [{
+            link: 'new-platform-flexberry-service-bus-statistics-monitor-list-form',
+            caption: i18n.t('forms.application.sitemap.statistics.new-platform-flexberry-service-bus-statistics-monitor-list-form.caption'),
+            title: i18n.t('forms.application.sitemap.statistics.new-platform-flexberry-service-bus-statistics-monitor-list-form.title'),
+            children: null
+          }, {
+            link: 'new-platform-flexberry-service-bus-statistics-record-list-form',
+            caption: i18n.t('forms.application.sitemap.statistics.new-platform-flexberry-service-bus-statistics-record-list-form.caption'),
+            title: i18n.t('forms.application.sitemap.statistics.new-platform-flexberry-service-bus-statistics-record-list-form.title'),
+            children: null
+          }, {
+            link: 'new-platform-flexberry-service-bus-statistics-setting-list-form',
+            caption: i18n.t('forms.application.sitemap.statistics.new-platform-flexberry-service-bus-statistics-setting-list-form.caption'),
+            title: i18n.t('forms.application.sitemap.statistics.new-platform-flexberry-service-bus-statistics-setting-list-form.title'),
+            children: null
+          }, {
+            link: 'new-platform-flexberry-service-bus-statistics-compression-setting-list-form',
+            caption: i18n.t('forms.application.sitemap.statistics.new-platform-flexberry-service-bus-statistics-compression-setting-list-form.caption'),
+            title: i18n.t('forms.application.sitemap.statistics.new-platform-flexberry-service-bus-statistics-compression-setting-list-form.title'),
+            children: null
+          },
+          ]
         },
+        {
+        link: null,
+        caption: i18n.t('forms.application.sitemap.audit-forms.caption'),
+        title: i18n.t('forms.application.sitemap.audit-forms.title'),
+        children: [{
+          link: 'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l',
+          caption: i18n.t('forms.application.sitemap.audit-forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l.caption'),
+          title: i18n.t('forms.application.sitemap.audit-forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l.title'),
+          children: null
+        }]
+      },
+      {
+        link: null,
+        caption: i18n.t('forms.application.sitemap.полномочия.caption'),
+        title: i18n.t('forms.application.sitemap.полномочия.title'),
+        children: [{
+          link: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-user-l',
+          caption: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-l.caption'),
+          title: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-l.title'),
+          children: null
+        }, {
+            link: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-role-l',
+            caption: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-l.caption'),
+            title: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-l.title'),
+            children: null
+          }, {
+            link: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l',
+            caption: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l.caption'),
+            title: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l.title'),
+            children: null
+          }, {
+            link: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l',
+            caption: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l.caption'),
+            title: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l.title'),
+            children: null
+          }, {
+            link: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-l',
+            caption: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-l.caption'),
+            title: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-l.title'),
+            children: null
+          }, {
+            link: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-view-l',
+            caption: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-view-l.caption'),
+            title: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-view-l.title'),
+            children: null
+          }, {
+            link: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-l',
+            caption: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-l.caption'),
+            title: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-l.title'),
+            children: null
+          }, {
+            link: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l',
+            caption: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l.caption'),
+            title: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l.title'),
+            children: null
+          }, {
+            link: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-l',
+            caption: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-l.caption'),
+            title: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-l.title'),
+            children: null
+          }, {
+            link: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l',
+            caption: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l.caption'),
+            title: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l.title'),
+            children: null
+          }]
+      },
       ]
     };
     }),
@@ -97,9 +222,77 @@ export default Ember.Controller.extend({
   actions: {
     /**
     */
-    hideHeader() {
-      Ember.$('.ui.attached.top').addClass('hidden-header');
-      Ember.$('.page-header-userbar').addClass('hidden-header');
+    login() {
+      let _this = this;
+      let login = _this.get('loginInput');
+      let password = _this.get('password');
+      if (login && password) {
+        _this._resetLoginErrors();
+        _this.set('tryToLogin', true);
+        Ember.$.ajax({
+          type: 'GET',
+          xhrFields: { withCredentials: true },
+          url: `${config.APP.backendUrls.api}/Login(login='${login}',password='${password}')`,
+          success(result) {
+            _this.set('tryToLogin', false);
+            if (result.value === true) {
+              _this._resetLoginData(login);
+              _this.transitionToRoute('index');
+            } else {
+              _this.set('errorMessage', t('forms.login.errors.incorrect-auth-data'));
+            }
+          },
+          error() {
+            _this.set('tryToLogin', false);
+            _this.set('errorMessage', t('forms.login.errors.server-error'));
+          },
+        });
+      } else {
+        if (!login) {
+          _this.set('emptyLogin', t('forms.login.errors.empty-login'));
+        }
+
+        if (!password) {
+          _this.set('emptyPassword', t('forms.login.errors.empty-password'));
+        }
+      }
+    },
+
+    /**
+    */
+    logout() {
+      let _this = this;
+      Ember.$.ajax({
+        type: 'GET',
+        xhrFields: { withCredentials: true },
+        url: `${config.APP.backendUrls.api}/Logout()`,
+        success(result) {
+          if (result.value === true) {
+            _this.set('login', '');
+          } else {
+            _this.set('errorMessage', t('forms.login.errors.unknown-error'));
+          }
+
+          _this.transitionToRoute('index');
+        },
+        error() {
+          _this.set('errorMessage', t('forms.login.errors.server-error'));
+          _this.transitionToRoute('index');
+        },
+      });
+    },
+
+    /**
+    */
+    goToLoginForm() {
+      this.transitionToRoute('login');
+    },
+
+    /**
+    */
+    closeLoginForm() {
+      this._resetLoginErrors();
+      this.transitionToRoute('index');
     },
 
     /**
@@ -108,7 +301,7 @@ export default Ember.Controller.extend({
       @method actions.toggleSidebar
     */
     toggleSidebar() {
-      Ember.$('.ui.sidebar.main.menu').sidebar({
+      Ember.$('.ui.sidebar').sidebar({
         onHide: function() {
           Ember.$('.sidebar.icon.text-menu-1').removeClass('hidden-menu');
           Ember.$('.sidebar.icon.text-menu-2').addClass('hidden-menu');
@@ -117,11 +310,16 @@ export default Ember.Controller.extend({
       if (Ember.$('.inverted.vertical.main.menu').hasClass('visible')) {
         Ember.$('.sidebar.icon.text-menu-1').removeClass('hidden-menu');
         Ember.$('.sidebar.icon.text-menu-2').addClass('hidden-menu');
-        Ember.$('.bgw-opacity').addClass('hidden');
       } else {
         Ember.$('.sidebar.icon.text-menu-1').addClass('hidden-menu');
         Ember.$('.sidebar.icon.text-menu-2').removeClass('hidden-menu');
-        Ember.$('.bgw-opacity').removeClass('hidden');
+      }
+      let sidebar = Ember.$('.ui.sidebar');
+      if (Ember.$('.inverted.vertical.main.menu').hasClass('visible')) {
+        Ember.$('.flexberry-content').animate({ 'width' : '100%'}, 500);
+      } else {
+        let newWidth = Ember.$('.flexberry-content').css( 'width', 'calc(100% - ' + sidebar.width() + 'px)');
+        Ember.$('.flexberry-content').animate({ 'width' : newWidth}, 500);
       }
     },
 
@@ -140,18 +338,28 @@ export default Ember.Controller.extend({
 
     /**
     */
-    goToLoginForm() {
-      this.transitionToRoute('login');
-    },
-
-    /**
-    */
     goToMainPage() {
       this.transitionToRoute('index');
     },
   },
 
-  getLogin(login) {
-    this.set('login', login);
+  /**
+  */
+  _resetLoginErrors() {
+    this.setProperties({
+      errorMessage: null,
+      emptyLogin: null,
+      emptyPassword: null,
+    });
   },
+
+  /**
+  */
+  _resetLoginData(login) {
+    this.setProperties({
+      login: login,
+      loginInput: null,
+      password: null,
+    });
+  }
 });
