@@ -1,7 +1,7 @@
 ---
 language: node_js
 node_js:
-  - "4"
+  - "5.1"
 
 sudo: false
 
@@ -9,16 +9,23 @@ cache:
   directories:
     - node_modules
 
+env:
+  - EMBER_TRY_SCENARIO=default
+  - EMBER_TRY_SCENARIO=ember-release
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - env: EMBER_TRY_SCENARIO=ember-release
+
 before_install:
   - npm config set spin false
-  - npm install -g bower
-  - bower --version
-  - npm install phantomjs-prebuilt
-  - node_modules/phantomjs-prebuilt/bin/phantomjs --version
+  - npm install -g npm@^2
 
 install:
+  - npm install -g bower
   - npm install
   - bower install
 
 script:
-  - npm test
+  - ember try $EMBER_TRY_SCENARIO test
