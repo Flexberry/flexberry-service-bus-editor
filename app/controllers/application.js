@@ -303,14 +303,14 @@ export default Ember.Controller.extend({
     */
     toggleSidebar() {
       let sidebar = Ember.$('.ui.sidebar');
-      sidebar.sidebar({closable: false});
       sidebar.sidebar({
+        closable: false,
+        dimPage: false,
         onHide: function() {
           Ember.$('.sidebar.icon.text-menu-1').removeClass('hidden-menu');
           Ember.$('.sidebar.icon.text-menu-2').addClass('hidden-menu');
         }
-      });
-      sidebar.sidebar('toggle');
+      }).sidebar('toggle');
       if (Ember.$('.inverted.vertical.main.menu').hasClass('visible')) {
         Ember.$('.sidebar.icon.text-menu-1').removeClass('hidden-menu');
         Ember.$('.sidebar.icon.text-menu-2').addClass('hidden-menu');
