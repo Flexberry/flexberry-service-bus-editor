@@ -77,6 +77,7 @@ export default Ember.Controller.extend({
     } else {
       i18n.set('locale', shortCurrentLocale);
     }
+    Ember.$('.ui.sidebar').sidebar({dimPage: false, closable: false});
   },
 
   /**
@@ -301,12 +302,15 @@ export default Ember.Controller.extend({
       @method actions.toggleSidebar
     */
     toggleSidebar() {
-      Ember.$('.ui.sidebar').sidebar({
+      let sidebar = Ember.$('.ui.sidebar');
+      sidebar.sidebar({closable: false});
+      sidebar.sidebar({
         onHide: function() {
           Ember.$('.sidebar.icon.text-menu-1').removeClass('hidden-menu');
           Ember.$('.sidebar.icon.text-menu-2').addClass('hidden-menu');
         }
-      }).sidebar('toggle');
+      });
+      sidebar.sidebar('toggle');
       if (Ember.$('.inverted.vertical.main.menu').hasClass('visible')) {
         Ember.$('.sidebar.icon.text-menu-1').removeClass('hidden-menu');
         Ember.$('.sidebar.icon.text-menu-2').addClass('hidden-menu');
@@ -314,12 +318,11 @@ export default Ember.Controller.extend({
         Ember.$('.sidebar.icon.text-menu-1').addClass('hidden-menu');
         Ember.$('.sidebar.icon.text-menu-2').removeClass('hidden-menu');
       }
-      let sidebar = Ember.$('.ui.sidebar');
       if (Ember.$('.inverted.vertical.main.menu').hasClass('visible')) {
-        Ember.$('.flexberry-content').animate({ 'width' : '100%'}, 500);
+        Ember.$('.full.height').animate({ 'width' : '100%'}, 500);
       } else {
-        let newWidth = Ember.$('.flexberry-content').css( 'width', 'calc(100% - ' + sidebar.width() + 'px)');
-        Ember.$('.flexberry-content').animate({ 'width' : newWidth}, 500);
+        let newWidth = Ember.$('.full.height').css( 'width', 'calc(100% - ' + sidebar.width() + 'px)');
+        Ember.$('.full.height').animate({ 'width' : newWidth}, 400);
       }
     },
 
