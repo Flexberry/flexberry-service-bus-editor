@@ -22,7 +22,9 @@
       </a>
     </div>
     <div class="page-header-userbar">
-      <span id="fio" class="hidden">ICS_HOME\login</span>
+      {{#if login}}
+        <span id="fio">ICS_HOME\ {{login}}</span>
+      {{/if}}
       <a id="ExitButton" class="exit-btn" {{action 'goToLoginForm'}}>
         {{t (if login "forms.application.header.logout.caption" "forms.application.header.login.caption")}}
       </a>
@@ -70,7 +72,7 @@
         {{/if}}
       </div>
       <div class="right menu">
-        <a class="brand item" href="#">
+        <a class="brand item" href="https://github.com/Flexberry/flexberry-service-bus-editor" target="_blank">
           {{t "forms.application.footer.application-git"}}
         </a>
       </div>

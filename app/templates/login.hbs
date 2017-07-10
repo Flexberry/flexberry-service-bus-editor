@@ -39,12 +39,12 @@
       </div>
     {{/if}}
 
-    <div class="field login-footer">
-      <button type="submit" class="ui button login-close-btn" {{action 'closeLoginForm'}}>
-        {{t "forms.login.back"}}
-      </button>
+    <div class="field login-footer" >
       <button type="submit" class="ui button login-logout-btn" {{action (if login 'logout' 'login')}}>
         {{t (if login "forms.login.logout" "forms.login.enter")}}
+      </button>
+      <button type="submit" class="ui button login-close-btn" {{action 'closeLoginForm'}}>
+        {{t "forms.login.back"}}
       </button>
     </div>
   </form>
