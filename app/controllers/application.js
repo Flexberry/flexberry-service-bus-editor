@@ -77,7 +77,6 @@ export default Ember.Controller.extend({
     } else {
       i18n.set('locale', shortCurrentLocale);
     }
-    Ember.$('.ui.sidebar').sidebar({dimPage: false, closable: false});
   },
 
   /**

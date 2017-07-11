@@ -23,6 +23,8 @@ before_install:
   - npm install -g npm@^2
 
 install:
+  - npm install -g phantomjs-prebuilt
+  - npm install -g ember-cli@2.4.3
   - npm install -g bower
   - npm install
   - bower install
