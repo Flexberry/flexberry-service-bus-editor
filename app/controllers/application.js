@@ -269,6 +269,7 @@ export default Ember.Controller.extend({
         success(result) {
           if (result.value === true) {
             _this.set('login', '');
+            _this.send('checkLogoutView');
           } else {
             _this.set('errorMessage', t('forms.login.errors.unknown-error'));
           }
@@ -322,6 +323,17 @@ export default Ember.Controller.extend({
       } else {
         let newWidth = Ember.$('.full.height').css( 'width', 'calc(100% - ' + sidebar.width() + 'px)');
         Ember.$('.full.height').animate({ 'width' : newWidth}, 400);
+      }
+    },
+
+    /**
+      Close sidebar if user logout.
+
+      @method actions.checkLogoutView
+    */
+    checkLogoutView() {
+      if (Ember.$('.inverted.vertical.main.menu').hasClass('visible')) {
+        this.send('toggleSidebar');
       }
     },
 
