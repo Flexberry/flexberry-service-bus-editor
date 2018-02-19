@@ -9,6 +9,9 @@ module.exports = function(environment) {
     backendUrl = 'http://localhost:6500';
   }
 
+  if (environment === 'docker') {
+    backendUrl = '/';
+  }
 
   var ENV = {
     modulePrefix: 'flexberry-service-bus-editor',
