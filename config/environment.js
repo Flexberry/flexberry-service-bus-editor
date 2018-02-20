@@ -1,4 +1,4 @@
-/* jshint node: true */
+﻿/* jshint node: true */
 
 module.exports = function(environment) {
   // Replace this local address to remote when backed will be published.
@@ -10,7 +10,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'docker') {
-    backendUrl = '/';
+    backendUrl = '';
   }
 
   var ENV = {
