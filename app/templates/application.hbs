@@ -33,7 +33,7 @@
     </div>
     <div class="page-header-userbar">
       {{#if login}}
-        <span id="fio">ICS_HOME\ {{login}}</span>
+        <span id="fio">{{login}}</span>
       {{/if}}
       <a id="ExitButton" class="exit-btn" {{action 'goToLoginForm'}}>
         {{t (if login "forms.application.header.logout.caption" "forms.application.header.login.caption")}}
