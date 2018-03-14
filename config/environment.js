@@ -1,4 +1,4 @@
-/* jshint node: true */
+﻿/* jshint node: true */
 
 module.exports = function(environment) {
   // Replace this local address to remote when backed will be published.
@@ -9,11 +9,14 @@ module.exports = function(environment) {
     backendUrl = 'http://localhost:6500';
   }
 
+  if (environment === 'docker') {
+    backendUrl = '';
+  }
 
   var ENV = {
     modulePrefix: 'flexberry-service-bus-editor',
     environment: environment,
-    rootURL: '/',
+    baseURL: '/',
     locationType: 'auto',
     EmberENV: {
       LOG_STACKTRACE_ON_DEPRECATION: false,
@@ -149,6 +152,7 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
+    ENV.baseURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
