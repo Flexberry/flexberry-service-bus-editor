@@ -14,17 +14,6 @@ module.exports = function(defaults) {
         'bower_components/semantic-ui'
       ]
     },
-    jscsOptions: {
-      enabled: true,
-      esnext: true,
-      configPath: './.jscsrc'
-    },
-    lessOptions: {
-      paths: [
-        'bower_components/semantic-ui',
-        'bower_components/app/styles/app.less'
-      ]
-    },
     outputPaths: {
       app: {
         css: {
@@ -35,7 +24,7 @@ module.exports = function(defaults) {
     SemanticUI: {
       import: {
         css: false,
-        javascript: false,
+        javascript: true,
         images: false,
         fonts: true
       }
@@ -74,8 +63,6 @@ module.exports = function(defaults) {
   app.import('vendor/serviceImages/minus.png', { destDir: 'assets/themes/blue-sky/assets/images' });
   app.import('vendor/serviceImages/header-bgw.png', { destDir: 'assets/themes/orange/assets/images' });
   app.import('vendor/serviceImages/bgw-head-calendar.png', { destDir: 'assets/themes/orange/assets/images' });
-
-  app.import('bower_components/semantic-ui/dist/semantic.js');
 
   return app.toTree();
 };

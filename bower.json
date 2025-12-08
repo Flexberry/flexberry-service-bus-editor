@@ -4,10 +4,13 @@
     "ember": "~2.4.3",
     "ember-cli-shims": "0.1.1",
     "ember-cli-test-loader": "0.2.2",
-    "semantic-ui": "git://github.com/Flexberry/Semantic-UI.git#fixed-abort",
-    "semantic-ui-daterangepicker": "5d46ed2e6e5a0bf398bb6a5df82e06036dfc46be",
-    "flatpickr-calendar": "git://github.com/chmln/flatpickr.git#2.3.4",
+    "semantic-ui": "https://github.com/Flexberry/Semantic-UI.git#fixed-abort",
+    "semantic-ui-daterangepicker": "https://github.com/Flexberry/semantic-ui-daterangepicker.git#main",
+    "flatpickr-calendar": "https://github.com/chmln/flatpickr.git#2.3.4",
     "blueimp-file-upload": "9.11.2",
-    "devicejs": "0.2.7"
+    "devicejs": "0.2.7",
+    "seiyria-bootstrap-slider": "6.0.6",
+    "jquery-minicolors": "2.2.6",
+    "js-beautify": "1.6.4"
   }
 }
